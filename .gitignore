@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+_apache.conf/
+_apache.cert/
+define.inc.php
+vhost.conf
+vhost-ssl.conf
+oppenssl.conf
+domains
