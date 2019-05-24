@@ -9,7 +9,6 @@ class ApacheConfiguration
      */
     public static function generateVHOST($domains = [], $ssl = false)
     {
-        $file = '';
         foreach ($domains as $domain) {
             if (!file_exists(_APACHE_VHOST_DESTINATION_PATH_)) {
                 mkdir(_APACHE_VHOST_DESTINATION_PATH_, 0755, true);
@@ -24,8 +23,10 @@ class ApacheConfiguration
             $opened = fopen($file, 'a') or exit(-1);
             fwrite($opened, self::replaceConstants($content, $domain));
             fclose($opened);
+
+            $message = (file_exists($file)) ? $domain . _DOMAIN_NAME_ . ( $ssl ? ' SSL' : '') . " VHOST generated" : "\e[0m\e[1;31m" . $domain . _DOMAIN_NAME_ . ( $ssl ? ' SSL' : '') . " VHOST not generated";
+            e($message);
         }
-        e("VHOST generated");
     }
 
     /**

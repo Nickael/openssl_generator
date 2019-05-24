@@ -1,7 +1,7 @@
 <?php
 
 define('_OPENSSL_CONF_', '..\..\apache\conf\openssl.cnf');
-define('_OPENSSL_EXEC_', '..\..\apache\bin\openssl.exe');
+define('_OPENSSL_EXEC_', 'openssl.exe');
 define('_WEBROOT_', 'C:/xampp/htdocs/typo3/webpassenger/web');
 define('_LOG_PATH_', 'logs');
 define('_SSL_PATH_', 'crt/io');
