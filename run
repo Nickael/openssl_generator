@@ -4,16 +4,6 @@ include_once 'ConfigurationGenerator.php';
 include_once 'Domains.php';
 include_once 'helper.php';
 
-//if ($_SERVER['argc'] = 1) {
-//    ConfigurationGenerator::generate(Domains::getInstance()->getDomains(), ConfigurationGenerator::CONFIGURATION_SSL);
-//    ConfigurationGenerator::generate(Domains::getInstance()->getDomains(), ConfigurationGenerator::CONFIGURATION_VHOST, true);
-//    ConfigurationGenerator::generate(Domains::getInstance()->getDomains(), ConfigurationGenerator::CONFIGURATION_VHOST, false);
-//} else {
-//var_dump(Domains::getInstance()->getDomains());
-//ConfigurationGenerator::generate(Domains::getInstance()->getDomains(), ConfigurationGenerator::CONFIGURATION_SSL);
-//ConfigurationGenerator::generate(Domains::getInstance()->getDomains(), ConfigurationGenerator::CONFIGURATION_VHOST, true);
-//ConfigurationGenerator::generate(Domains::getInstance()->getDomains(), ConfigurationGenerator::CONFIGURATION_VHOST, false);
-//}
 switch ($argc) {
     case 2 :
         switch (intval($argv[1])) {
