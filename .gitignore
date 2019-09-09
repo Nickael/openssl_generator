@@ -7,3 +7,4 @@ vhost.conf
 vhost-ssl.conf
 oppenssl.conf
 domains
+**/_apache.*

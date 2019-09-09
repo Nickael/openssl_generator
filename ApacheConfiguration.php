@@ -41,6 +41,7 @@ class ApacheConfiguration
         $content = str_replace("__SSL_PATH__", _SSL_PATH_, $content);
         $content = str_replace("__WEBROOT__", _WEBROOT_, $content);
         $content = str_replace("__LOG_PATH__", _LOG_PATH_, $content);
+        $content = str_replace("__DOMAIN__", $domain, $content);
 
         return $content;
     }
